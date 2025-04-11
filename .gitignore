@@ -1,0 +1,28 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*$py.class
+
+# Virtual environment
+venv/
+
+# Local database (use PostgreSQL on Render)
+db.sqlite3
+
+# Secret config files
+.env
+.env.*
+
+# Django static/media files (auto-generated)
+staticfiles/
+media/
+
+# IDE/editor configs
+.vscode/
+.idea/
+
+# macOS/Windows system files
+.DS_Store
+Thumbs.db

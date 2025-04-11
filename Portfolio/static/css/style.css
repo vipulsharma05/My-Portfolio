@@ -1,0 +1,115 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#typed-text {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+
+
+/* . Hover Effects + Tooltips */
+.skill-box {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.skill-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* about section */
+body {
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  section#about {
+    background: linear-gradient(to right, #ffffff, #f4f6f9);
+    transition: background 0.3s ease;
+  }
+  
+  body.dark-mode section#about {
+    background: linear-gradient(to right, #1a1a1a, #2a2a2a);
+    color: #f1f1f1;
+  }
+  
+  .about-illustration {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+  }
+  
+  body.dark-mode .about-illustration {
+    filter: drop-shadow(0 4px 15px rgba(255, 255, 255, 0.1));
+  }
+  
+  .about-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+  }
+  
+  .about-icon {
+    transition: transform 0.3s ease;
+  }
+  .about-icon:hover {
+    transform: scale(1.05);
+  }
+  /* Skills  */
+  .skill-card {
+    transition: all 0.4s ease;
+    opacity: 1;
+    transform: scale(1);
+  }
+  .skill-card.fadeOut {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+  }
+  .btn-group .btn.active {
+    background-color: #4b0082;
+    color: white;
+  }
+
+  /* experience */
+  .timeline-item {
+    border-left: 4px solid #4b0082;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    background: #4b0082;
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+  /*project  */
+  #project .card:hover {
+    transform: translateY(-8px);
+    transition: 0.3s ease;
+  }
+
+  /* projects */
+  .project-hover:hover {
+    transform: translateY(-6px);
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  }
+
+  /* contact */
+ 
+ /* Contact Placeholder Styling */
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: #bbb;
+  font-size: 0.95rem;
+  font-style: italic;
+}

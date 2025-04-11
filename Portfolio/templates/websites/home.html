@@ -1,0 +1,685 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href={% static 'css/style.css' %}>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <!-- for google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+   <!-- Font Awesome for Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css for simple animation effects -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  </head>
+  <body>
+    <!-- Nav bar -->
+
+    <nav
+      class="navbar navbar-expand-lg fixed-top"
+      style="background-color: #4b0082"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand text-white d-flex align-items-center" href="#">
+          <i class="fas fa-laptop-code me-2"></i>MyPortfolio
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarClassic"
+          aria-controls="navbarClassic"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarClassic"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#home"
+                ><i class="fas fa-home me-1"></i>Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#about"
+                ><i class="fas fa-user me-1"></i>About Me</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#skills"
+                ><i class="fas fa-cogs me-1"></i>Skills</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#experience"
+                ><i class="fas fa-briefcase me-1"></i>Experience</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#project"
+                ><i class="fas fa-project-diagram me-1"></i>Project</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#contact"
+                ><i class="fas fa-envelope me-1"></i>Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+
+    <section id="home" class="text-white" style="background: linear-gradient(to right, #4B0082, #8A2BE2); margin-top: 80px; position: relative;">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          
+          <!-- Left Side -->
+          <div class="col-md-6 mb-4 mb-md-0 animate__animated animate__fadeInLeft">
+            <div class="typewriter mb-3">
+              <h1>Hi, I’m Vipul Sharma</h1>
+              <h3><span id="typed-text" class="text-warning"></span></h3>
+            </div>
+            
+            
+            <!-- Buttons -->
+            <div class="mt-4">
+              <a href="#contact" class="btn btn-light me-3"><i class="fas fa-paper-plane"></i> Contact Me</a>
+              <a href={%static "files/resume.pdf" %} class="btn btn-outline-light" download><i class="fas fa-download"></i> Download Resume</a>
+            </div>
+    
+            <!-- Social Icons -->
+            <div class="mt-4">
+              <a href="https://github.com/vipulsharma05" target="_blank" class="text-white me-3 fs-4"><i class="fab fa-github"></i></a>
+              <a href="https://linkedin.com/in/vipul-sharma-6b2668258" target="_blank" class="text-white me-3 fs-4"><i class="fab fa-linkedin"></i></a>
+              <a href="mailto:vipulsharma5002@email.com" class="text-white fs-4"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+    
+          <!-- Right Side: Image -->
+          <div class="col-md-6 text-center animate__animated animate__fadeInRight">
+            <img src={% static "images/photo.jpg" %} alt="Vipul Sharma" class="img-fluid rounded-circle shadow-lg" style="max-width: 300px;">
+          </div>
+        </div>
+      </div>
+    
+      <!-- Shape Divider -->
+      <div style="position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0;">
+        <svg viewBox="0 0 500 100" preserveAspectRatio="none" style="height: 60px; width: 100%;">
+          <path d="M0,0 C150,100 350,0 500,100 L500,0 L0,0 Z" style="stroke: none; fill: #fff;"></path>
+        </svg>
+      </div>
+    </section>
+
+
+
+    <!-- Core Soft Skills Section -->
+<section class="py-5 bg-white" id="core-skills">
+  <div class="container text-center">
+    <h2 class="mb-5"><i class="fas fa-user-check me-2 text-primary"></i>Core Strengths</h2>
+    <div class="row g-4">
+      
+      <!-- Communication -->
+      <div class="col-md-3 animate__animated animate__fadeInUp">
+        <div class="p-4 border rounded shadow-sm h-100 skill-box" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to know more!">
+
+          <i class="fas fa-comments fa-2x text-success mb-3"></i>
+          <h5 class="fw-bold">Communication</h5>
+          <p class="text-muted">Effectively conveys ideas and actively listens in team discussions.</p>
+        </div>
+      </div>
+
+      <!-- Leadership -->
+      <div class="col-md-3 animate__animated animate__fadeInUp animate__delay-1s">
+        <div class="p-4 border rounded shadow-sm h-100 skill-box" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to know more!">
+
+          <i class="fas fa-chess-king fa-2x text-warning mb-3"></i>
+          <h5 class="fw-bold">Leadership</h5>
+          <p class="text-muted">Confidently takes initiative and motivates peers to reach shared goals.</p>
+        </div>
+      </div>
+
+      <!-- Teamwork -->
+      <div class="col-md-3 animate__animated animate__fadeInUp animate__delay-2s">
+        <div class="p-4 border rounded shadow-sm h-100 skill-box" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to know more!">
+
+          <i class="fas fa-users fa-2x text-primary mb-3"></i>
+          <h5 class="fw-bold">Teamwork</h5>
+          <p class="text-muted">Works well with others to solve problems and deliver results collaboratively.</p>
+        </div>
+      </div>
+
+      <!-- Time Management -->
+      <div class="col-md-3 animate__animated animate__fadeInUp animate__delay-3s">
+        <div class="p-4 border rounded shadow-sm h-100 skill-box" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to know more!">
+
+          <i class="fas fa-clock fa-2x text-danger mb-3"></i>
+          <h5 class="fw-bold">Time Management</h5>
+          <p class="text-muted">Efficiently balances academics, coding, and project deadlines.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<div style="height: 60px; overflow: hidden;">
+  <svg viewBox="0 0 500 100" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+    <path d="M0,100 C150,0 350,100 500,0 L500,100 L0,100 Z" style="stroke: none; fill: #fff;"></path>
+  </svg>
+</div>
+
+<!-- Divider -->
+<div class="bg-white" style="height: 60px; overflow: hidden;">
+  <svg viewBox="0 0 500 100" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+    <path d="M0,100 C150,0 350,100 500,0 L500,100 L0,100 Z" style="stroke: none; fill: #f8f9fa;"></path>
+  </svg>
+</div>
+
+    <!-- About Me Section -->
+  <!-- About Me Section -->
+  <section id="about" class="py-5 text-dark" style="background: url('https://www.svgbackgrounds.com/wp-content/uploads/2021/05/wave-haikei.svg') no-repeat center center; background-size: cover;">
+
+    <div class="container">
+      
+      <!-- Section Heading -->
+      <div class="text-center mb-5">
+        <h2 class="text-primary fw-bold"><i class="fas fa-user me-2"></i>About Me</h2>
+        <p class="fs-5 fst-italic text-muted">
+          "Turning ideas into impactful digital experiences through AI and code."
+        </p>
+      </div>
+  
+      <div class="row align-items-center justify-content-center">
+        
+        <!-- Icon/Illustration -->
+        <div class="col-md-4 text-center mb-4 mb-md-0 animate__animated animate__fadeInLeft">
+          <img 
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" 
+            alt="Professional Icon" 
+            class="img-fluid shadow rounded-circle" 
+            style="max-width: 220px; height: auto;">
+          <p class="text-muted mt-2">Tech-Driven & Purpose-Focused</p>
+        </div>
+  
+        <!-- About Text -->
+        <div class="col-md-8 about-text animate__animated animate__fadeInRight">
+          <div class="bg-white p-4 rounded shadow-sm">
+            <p>
+              I'm <strong>Vipul Sharma</strong>, a final-year B.Tech student in <strong>Computer Science and Engineering (Artificial Intelligence & Machine Learning)</strong> at ABES Engineering College, Ghaziabad.
+              I’m passionate about leveraging AI and modern web technologies to build practical, impactful solutions.
+            </p>
+            <p>
+              My projects like <strong>Face Mask Detection</strong> and <strong>Cricket Team Analysis</strong> combine ML with real-world applications. I've worked on frontend systems for the <strong>Smart India Hackathon</strong>, and excel in Python, Django, and Power BI.
+            </p>
+            <p>
+              With <strong>450+ LeetCode problems</strong> solved, 90% in <strong>NPTEL IoT</strong>, and strong backend/frontend skills — I thrive in solving complex problems.
+            </p>
+            <p>
+              Off-screen, I’m a national-level Kabaddi player, where strategy and execution go hand-in-hand with my work ethic.
+            </p>
+            <div class="mt-4">
+              <a href="{% static 'files/VIPUL SHARMA_RESUME.pdf' %}" class="btn btn-outline-primary me-3" download>
+                <i class="fas fa-download me-2"></i>Resume
+              </a>
+              <a href="#skills" class="btn btn-primary">
+                <i class="fas fa-arrow-down me-2"></i>Skills & Tools
+              </a>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+    
+
+ <!-- Skills Section -->
+<section id="skills" class="py-5 bg-light text-dark">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-primary">My Skills</h2>
+      <p class="text-muted">Hover over the filters to explore my strengths</p>
+
+      <!-- Filter Buttons -->
+      <div class="btn-group flex-wrap my-4" role="group">
+        <button class="btn btn-outline-primary active" onclick="filterSkills('all', this)">All</button>
+        <button class="btn btn-outline-primary" onclick="filterSkills('languages', this)">Languages</button>
+        <button class="btn btn-outline-primary" onclick="filterSkills('frontend', this)">Frontend</button>
+        <button class="btn btn-outline-primary" onclick="filterSkills('backend', this)">Backend</button>
+        <button class="btn btn-outline-primary" onclick="filterSkills('ai', this)">AI/ML</button>
+        <button class="btn btn-outline-primary" onclick="filterSkills('tools', this)">Tools</button>
+        <button class="btn btn-outline-primary" onclick="filterSkills('database', this)">Database</button>
+      </div>
+    </div>
+
+    <div class="row g-4 justify-content-center" id="skills-grid">
+
+      <!-- Languages -->
+      <div class="col-md-4 skill-card all languages ai">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5>
+            <i class="fab fa-python" style="color: #3776AB; font-size: 1.8rem; margin-right: 8px;"></i>
+            Python
+          </h5>
+          <div class="rating text-warning fs-5">★★★★★</div>
+        </div>
+      </div>
+      <div class="col-md-4 skill-card all languages">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Logo" style="height: 24px; margin-right: 8px;">
+            C
+          </h5>
+          <div class="rating text-warning fs-5">★★★★☆</div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 skill-card all languages">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++" style="height: 24px; margin-right: 8px;">
+            C++
+          </h5>
+          <div class="rating text-warning fs-5">★★★★☆</div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 skill-card all languages">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fab fa-java text-primary me-2"></i>Java</h5>
+          <div class="rating text-warning fs-5">★★☆☆☆</div>
+        </div>
+      </div>
+
+      <!-- Frontend -->
+      <div class="col-md-4 skill-card all frontend">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fab fa-html5 text-danger me-2"></i>HTML</h5>
+          <div class="rating text-warning fs-5">★★★★☆</div>
+        </div>
+      </div>
+      <div class="col-md-4 skill-card all frontend">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fab fa-css3-alt text-primary me-2"></i>CSS</h5>
+          <div class="rating text-warning fs-5">★★★★☆</div>
+        </div>
+      </div>
+      <div class="col-md-4 skill-card all frontend">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fab fa-js-square text-warning me-2"></i>JavaScript</h5>
+          <div class="rating text-warning fs-5">★★★☆☆</div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="col-md-4 skill-card all backend database">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fas fa-database text-secondary me-2"></i>MySQL</h5>
+          <div class="rating text-warning fs-5">★★★★☆</div>
+        </div>
+      </div>
+      <div class="col-md-4 skill-card all backend">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5>
+            <img src="https://static.djangoproject.com/img/logos/django-logo-positive.png" alt="Django" style="height: 24px; margin-right: 8px;">
+            
+          </h5>
+          <div class="rating text-warning fs-5">★★★★☆</div>
+        </div>
+      </div>
+      <div class="col-md-4 skill-card all backend">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fab fa-node-js text-success me-2"></i>Node.js</h5>
+          <div class="rating text-warning fs-5">★★☆☆☆</div>
+        </div>
+      </div>
+      <div class="col-md-4 skill-card all backend">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fas fa-spider text-danger me-2"></i>Web Scraping</h5>
+          <div class="rating text-warning fs-5">★★★☆☆</div>
+        </div>
+      </div>
+
+      <!-- AI/ML -->
+      <div class="col-md-4 skill-card all ai">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fas fa-brain text-success me-2"></i>Machine Learning</h5>
+          <div class="rating text-warning fs-5">★★★★☆</div>
+        </div>
+      </div>
+      <div class="col-md-4 skill-card all ai">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fas fa-robot text-secondary me-2"></i>AI Models</h5>
+          <div class="rating text-warning fs-5">★★★☆☆</div>
+        </div>
+      </div>
+      <div class="col-md-4 skill-card all ai">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fas fa-project-diagram text-info me-2"></i>TensorFlow/Keras</h5>
+          <div class="rating text-warning fs-5">★★★☆☆</div>
+        </div>
+      </div>
+      <div class="col-md-4 skill-card all ai">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fas fa-camera text-danger me-2"></i>OpenCV</h5>
+          <div class="rating text-warning fs-5">★★★★☆</div>
+        </div>
+      </div>
+      <div class="col-md-4 skill-card all ai">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fas fa-chart-line text-dark me-2"></i>Regression</h5>
+          <div class="rating text-warning fs-5">★★★☆☆</div>
+        </div>
+      </div>
+      <div class="col-md-4 skill-card all ai">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fas fa-tree text-success me-2"></i>Decision Tree</h5>
+          <div class="rating text-warning fs-5">★★★☆☆</div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="col-md-4 skill-card all tools">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fas fa-chart-bar text-danger me-2"></i>Power BI</h5>
+          <div class="rating text-warning fs-5">★★★☆☆</div>
+        </div>
+      </div>
+      <div class="col-md-4 skill-card all tools">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fas fa-flask text-info me-2"></i>Google Colab</h5>
+          <div class="rating text-warning fs-5">★★★★☆</div>
+        </div>
+      </div>
+      <div class="col-md-4 skill-card all tools">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code Logo" style="height: 24px; margin-right: 8px;">
+            VS Code
+          </h5>
+          <div class="rating text-warning fs-5">★★★★★</div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 skill-card all tools">
+        <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+          <h5><i class="fab fa-github text-dark me-2"></i>GitHub / Git</h5>
+          <div class="rating text-warning fs-5">★★★★☆</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="py-5" style="background-color: #f4f6f9;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-primary"><i class="fas fa-briefcase me-2"></i>Experience</h2>
+      <p class="text-muted">Hackathons and leadership experience that shaped my journey.</p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- Scaler Hackathon -->
+      <div class="timeline-item mb-4 p-4 bg-white shadow-sm rounded">
+        <h5 class="text-dark mb-1">Participant – AI ChatBot Builder <span class="text-muted fs-6">@ Scaler Hat Hackathon</span></h5>
+        <p class="mb-1"><i class="far fa-calendar-alt me-2 text-primary"></i>September 2023</p>
+        <p class="mb-2"><i class="fas fa-map-marker-alt me-2 text-secondary"></i>Online</p>
+        <ul class="mb-0 ps-3">
+          <li>Built a conversational AI chatbot using NLP techniques</li>
+          <li>Integrated ML models for user intent recognition</li>
+          <li>Collaborated in a team environment to meet time-critical challenges</li>
+        </ul>
+      </div>
+
+      <!-- Smart India Hackathon -->
+      <div class="timeline-item mb-4 p-4 bg-white shadow-sm rounded">
+        <h5 class="text-dark mb-1">Frontend Developer <span class="text-muted fs-6">@ Smart India Hackathon</span></h5>
+        <p class="mb-1"><i class="far fa-calendar-alt me-2 text-primary"></i>August 2023</p>
+        <p class="mb-2"><i class="fas fa-map-marker-alt me-2 text-secondary"></i>Ghaziabad, India</p>
+        <ul class="mb-0 ps-3">
+          <li>Developed frontend interface for a Clean and Green Technology web app</li>
+          <li>Used HTML, CSS, JavaScript, and Bootstrap for UI components</li>
+          <li>Contributed to responsive design and accessibility optimization</li>
+        </ul>
+      </div>
+
+      <!-- Ardema Technical Club -->
+      <div class="timeline-item p-4 bg-white shadow-sm rounded">
+        <h5 class="text-dark mb-1">Team Lead <span class="text-muted fs-6">@ Ardema Technical Club</span></h5>
+        <p class="mb-1"><i class="far fa-calendar-alt me-2 text-primary"></i>2022 – Present</p>
+        <p class="mb-2"><i class="fas fa-map-marker-alt me-2 text-secondary"></i>ABES Engineering College</p>
+        <ul class="mb-0 ps-3">
+          <li>Led technical teams in multiple college-level tech initiatives</li>
+          <li>Mentored juniors in frontend development and GitHub usage</li>
+          <li>Coordinated project-based learning and presentations</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Projects Section -->
+<section id="project" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold text-primary"><i class="fas fa-project-diagram me-2"></i>My Projects</h2>
+      <p class="text-muted">Explore my recent work, categorized by domain.</p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="text-center mb-4">
+      <button class="btn btn-sm btn-outline-dark me-2 filter-btn active" data-filter="all">All</button>
+      <button class="btn btn-sm btn-outline-dark me-2 filter-btn" data-filter="ai">AI/ML</button>
+      <button class="btn btn-sm btn-outline-dark me-2 filter-btn" data-filter="cv">Computer Vision</button>
+      <button class="btn btn-sm btn-outline-dark me-2 filter-btn" data-filter="data">Data Viz</button>
+      <button class="btn btn-sm btn-outline-dark me-2 filter-btn" data-filter="web">Web Dev</button>
+    </div>
+
+    <!-- Project Cards -->
+    <div class="row g-4">
+
+      <!-- Face Mask Detection -->
+      <div class="col-md-4 project-card" data-category="cv ai">
+        <div class="card shadow-sm h-100 border-0 project-hover">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Face Mask Detection</h5>
+            <p class="text-muted small">Python • TensorFlow • CNN • OpenCV</p>
+            <p class="card-text">Real-time mask detection using CNN with OpenCV integration.</p>
+            <div class="d-flex gap-2">
+              <a href="https://github.com/vipulsharma05/Face-Mask-Detection" class="btn btn-sm btn-outline-dark" data-bs-toggle="tooltip" title="View Code"><i class="fab fa-github"></i></a>
+              <a href="https://your-demo.com/face-mask" class="btn btn-sm btn-outline-success" data-bs-toggle="tooltip" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#maskModal"><i class="fas fa-image"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hand Tracking Module -->
+      <div class="col-md-4 project-card" data-category="cv">
+        <div class="card shadow-sm h-100 border-0 project-hover">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Hand Tracking Module</h5>
+            <p class="text-muted small">Python • MediaPipe • OpenCV</p>
+            <p class="card-text">Tracks 21 hand landmarks in real-time using MediaPipe.</p>
+            <div class="d-flex gap-2">
+              <a href="https://github.com/yourusername/hand-tracking-module" class="btn btn-sm btn-outline-dark" data-bs-toggle="tooltip" title="View Code"><i class="fab fa-github"></i></a>
+              <a href="https://your-demo.com/hand-tracking" class="btn btn-sm btn-outline-success" data-bs-toggle="tooltip" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#handModal"><i class="fas fa-image"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cricket Team Analysis -->
+      <div class="col-md-4 project-card" data-category="data ai">
+        <div class="card shadow-sm h-100 border-0 project-hover">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Cricket Team Analysis</h5>
+            <p class="text-muted small">Power BI • Python • Matplotlib</p>
+            <p class="card-text">Dashboard-driven selection analysis using visual insights.</p>
+            <div class="d-flex gap-2">
+              <a href="https://github.com/yourusername/cricket-analysis" class="btn btn-sm btn-outline-dark" data-bs-toggle="tooltip" title="View Code"><i class="fab fa-github"></i></a>
+              <a href="https://your-demo.com/cricket-analysis" class="btn btn-sm btn-outline-success" data-bs-toggle="tooltip" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#cricketModal"><i class="fas fa-image"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Chat App -->
+      <div class="col-md-4 project-card" data-category="web">
+        <div class="card shadow-sm h-100 border-0 project-hover">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Web Chat App</h5>
+            <p class="text-muted small">Django • HTML • CSS</p>
+            <p class="card-text">Real-time multi-room chat app using  Django.</p>
+            <div class="d-flex gap-2">
+              <a href="https://github.com/vipulsharma05/07.web-chat-app" class="btn btn-sm btn-outline-dark" data-bs-toggle="tooltip" title="View Code"><i class="fab fa-github"></i></a>
+              <a href="https://vipulsharma05.github.io/07.web-chat-app/" class="btn btn-sm btn-outline-success" data-bs-toggle="tooltip" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#chatModal"><i class="fas fa-image"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Modal Screenshots -->
+<section id="project-modals">
+  <!-- all modals here -->
+  <div class="modal fade" id="maskModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content"><img src="{% static 'images/face.png' %}" alt="Face Mask" class="img-fluid rounded"></div>
+    </div>
+</div>
+
+<div class="modal fade" id="handModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content"><img src="{% static 'images/handtrack.png' %}" alt="Hand Tracking" class="img-fluid rounded"></div>
+  </div>
+</div>
+
+<div class="modal fade" id="cricketModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content"><img src="{% static 'images/cricket.png' %}" alt="Cricket Dashboard" class="img-fluid rounded"></div>
+  </div>
+</div>
+
+<div class="modal fade" id="chatModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content"><img src="{% static 'images/webchat.png' %}" alt="Chat App" class="img-fluid rounded"></div>
+  </div>
+</div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-dark text-white">
+  <div class="container">
+
+    <!-- Flash Messages (Django messages framework) -->
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-info"><i class="fas fa-envelope me-2"></i>Contact Me</h2>
+      <p class="text-light">Let's build something great together! Feel free to reach out below 👇</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <form method="POST" action="{% url 'contact' %}">
+          {% csrf_token %}  
+          <!-- CSRF stands for "Cross-Site Request Forgery"  -->
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="col-12">
+              <input type="text" class="form-control" name="subject" placeholder="Subject (optional)">
+            </div>
+            <div class="col-12">
+              <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="col-12 text-center mt-3">
+              <button type="submit" class="btn btn-outline-light px-4">
+                <i class="fas fa-paper-plane me-2"></i>Send Message
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    
+
+    <!-- Optional: Social Links -->
+    <div class="text-center mt-4">
+      <a href="https://github.com/vipulsharma05" target="_blank" class="text-white me-3 fs-4"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/vipul-sharma-6b2668258" target="_blank" class="text-white me-3 fs-4"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:vipulsharma5002@email.com" class="text-white fs-4"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+    <!-- Typed.js CDN -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- javascripts -->
+<script></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src={% static "js/script.js" %}></script>
+
+  </body>
+</html>
