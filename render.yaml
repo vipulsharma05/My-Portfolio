@@ -1,22 +1,21 @@
 databases:
-  - name: mysitedb
+  - name: Portfoliodb
     plan: free
-    databaseName: portfolio
-    user: portfolio
+    databaseName: Portfolio
+    user: Portfolio
 
 services:
   - type: web
-    name: portfolio
-    env: python
     plan: free
-    buildCommand: "cd Portfolio && pip install -r ../requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate"
-    startCommand: "cd Portfolio && gunicorn Portfolio.asgi:application -k uvicorn.workers.UvicornWorker"
-    envVars:
+    name: Portfolio
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "python -m gunicorn Portfolio.asgi:application -k uvicorn.workers.UvicornWorker"    envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: mysitedb  # <-- updated here
+          name: Portfoliodb
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
-      - key: PYTHON_VERSION
-        value: 3.11.6
+      - key: WEB_CONCURRENCY
+        value: 4
