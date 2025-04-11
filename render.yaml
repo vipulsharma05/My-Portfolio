@@ -1,5 +1,5 @@
 databases:
-  - name: portfoliodb
+  - name: mysitedb
     plan: free
     databaseName: portfolio
     user: portfolio
@@ -9,12 +9,12 @@ services:
     name: portfolio
     env: python
     plan: free
-    buildCommand: "cd Portfolio && pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate"
+    buildCommand: "cd Portfolio && pip install -r ../requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate"
     startCommand: "cd Portfolio && gunicorn Portfolio.asgi:application -k uvicorn.workers.UvicornWorker"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: portfoliodb          # ✅ FIXED
+          name: mysitedb  # <-- updated here
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
