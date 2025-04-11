@@ -6,15 +6,15 @@ databases:
 
 services:
   - type: web
-    plan: free
     name: portfolio
-    runtime: python
+    env: python
+    plan: free
     buildCommand: "./build.sh"
-    startCommand: gunicorn Portfolio.Portfolio.asgi:application -k uvicorn.workers.UvicornWorker
+    startCommand: "cd Portfolio && gunicorn Portfolio.asgi:application -k uvicorn.workers.UvicornWorker"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: portfoliodb       # ✅ This must match your actual database name exactly
+          name: portfoliodb
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
