@@ -10,7 +10,7 @@ services:
     name: portfolio
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "python -m gunicorn Portfolio.asgi:application -k uvicorn.workers.UvicornWorker"
+    startCommand: gunicorn Portfolio.Portfolio.asgi:application -k uvicorn.workers.UvicornWorker
     envVars:
       - key: DATABASE_URL
         fromDatabase:
